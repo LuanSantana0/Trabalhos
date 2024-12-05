@@ -1,0 +1,419 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    margin-top: 150px;
+    text-align: center;
+}
+h2.titulo span{
+    color: #ff914d;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%;
+    margin-bottom: 70px;
+}
+
+header > .interface{ /* procura os elementos com a classe interface dentro do header*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #7d7d7d;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ff914d;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #e45902ab;
+    transform: scale(1.05);
+}
+
+header .btn-contato button:hover{
+    box-shadow: 0px 0px 8px #e45902ab;
+}
+
+header .logo span{
+    color: #ff914d;
+}
+
+/* ESTILO DO TOPO */
+
+
+section .topo-do-site{
+    padding: 40px 4%;
+}
+
+section .topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 34px;
+    line-height: 40px;
+    max-width: 450px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #ff914d;
+    font-size: 42px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0px;
+    margin-right: 20px;
+}
+
+.topo-do-site .img-topo-site{
+    position: relative; 
+    width: 450px;
+    height: 320px;
+    clip-path: polygon(
+        50% 0%, 
+        100% 25%, 
+        100% 75%, 
+        50% 100%, 
+        0% 75%, 
+        0% 25%
+    );
+    background-color: #ff914d;
+    box-shadow: 0px 0px 8px #e45902ab;
+    overflow: visible;
+    margin-left: 20px;
+}
+
+.topo-do-site .img-topo-site img{
+    position: absolute; 
+    top: -20px; 
+    left: -20px; 
+    width: 110%; 
+    height: 110%; 
+    object-fit: cover;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    
+}
+
+
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS HABILIDADESS REQUERIDAS */
+
+section .habilidades-requeridas{
+    padding: 40px 4%;
+}
+
+.habilidades-requeridas .flex{
+    gap: 60px;
+}
+
+.habilidades-requeridas .habilidades-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    transition: .2s;
+}
+
+.habilidades-requeridas .habilidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffffff7e;
+}
+
+.habilidades-requeridas .habilidades-box i{
+    font-size: 70px;
+    color: #ff914d;
+}
+
+.habilidades-requeridas .habilidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO  TEMPO DE FORMAÇÃO*/
+
+section .tempo-de-formacao{
+    padding: 80px 4%;
+}
+
+.tempo-de-formacao .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.tempo-de-formacao .txt-tempo-de-formacao{
+    color: #fff;
+}
+
+.tempo-de-formacao .txt-tempo-de-formacao h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.tempo-de-formacao .txt-tempo-de-formacao h2 span{
+    color: #ff914d;
+}
+
+.tempo-de-formacao .txt-tempo-de-formacao p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* ESTILO DE ONDE ESTUDAR */
+
+ .onde-estudar{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff3b;
+}
+
+.onde-estudar .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 0% 100%;
+    transition: 3s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+
+.formulário{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #24242432;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px ;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form input::placeholder{
+    color: #ff914d;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;   
+}
+
+form .btn-enviar input[type=submit]{
+    width: 120px;
+    background-color: #ff914d;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff3b;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+.line-footer{
+    padding: 20px 0;
+    
+}
+
+.borda{
+    border-top: 2px solid #ff914d;
+}
+
+footer .nome-equipe {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+footer .nome-equipe .membro {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+footer .nome-equipe i {
+    font-size: 24px; 
+    color: #ff914d; 
+}
+
+footer .nome-equipe h4 {
+    margin: 0; 
+    font-size: 20px; 
+    color: #ff914d; 
+}
+
+footer .line-footer p i{
+    color:#ff914d;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+}
+
+@media screen and (max-width: 1020px){
+    
+    /* classes gerais */
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* cabeçalho */
+    .menu-desktop, btn-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE  */
+
+    section .topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+        max-width: 450px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 80%;
+        top: -15px; 
+        left: -15px; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+}
